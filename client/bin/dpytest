@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# [use in container]
+# dpytest -> debug pytest
+python -m debugpy --listen 0.0.0.0:5679 --wait-for-client -m pytest "$@"
+  

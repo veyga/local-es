@@ -1,0 +1,38 @@
+[loggers]
+keys = root,simple
+
+[logger_root]
+level = INFO
+handlers = root
+qualname = root
+
+[logger_simple]
+level = INFO
+handlers = simple
+qualname = simple
+
+[handlers]
+keys = root,simple
+
+[handler_root]
+class = StreamHandler
+level = NOTSET
+formatter = json
+args = (sys.stdout,)
+
+[handler_simple]
+class = StreamHandler
+level = NOTSET
+formatter = simple
+args = (sys.stdout,)
+
+[formatters]
+keys = json,simple
+
+[formatter_json]
+format = %(message)s
+class = log.formatters.JsonFormatter
+
+[formatter_simple]
+format = %(message)s
+class = log.formatters.SimpleFormatter

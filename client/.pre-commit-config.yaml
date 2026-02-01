@@ -1,0 +1,14 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.4.2
+    hooks:
+      - id: ruff-format  # Run the formatter.
+        args:
+          - --config
+          - pyproject.toml
+      - id: ruff  # Run the linter.
+        args:
+          - --config
+          - pyproject.toml
+          # - --fix
+          # lint fails will disallow commits

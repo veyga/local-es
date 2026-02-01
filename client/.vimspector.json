@@ -1,0 +1,78 @@
+{
+  "adapters": {
+    "python-remote-5678": {
+      "port": "5678",
+      "launch": {
+        "remote": {
+          "launchCommmand": [
+            "python",
+            "-m",
+            "debugpy",
+            "--listen",
+            "0.0.0.0:5678",
+            "%CMD%"
+          ]
+        }
+      }
+    },
+    "python-remote-5679": {
+      "port": "5679",
+      "launch": {
+        "remote": {
+          "launchCommmand": [
+            "python",
+            "-m",
+            "debugpy",
+            "--listen",
+            "0.0.0.0:5679",
+            "%CMD%"
+          ]
+        }
+      }
+    }
+  },
+  "configurations": {
+    "operator": {
+      "adapter": "python-remote-5678",
+      "breakpoints": {
+        "exception": {
+          "raised": "N",
+          "uncaught": "N",
+          "userUnhandled": "N"
+        }
+      },
+      "remote-request": "attach",
+      "configuration": {
+        "request": "attach",
+        "justMyCode": true,
+        "pathMappings": [
+          {
+            "localRoot": "${workspaceRoot}",
+            "remoteRoot": "/app"
+          }
+        ]
+      }
+    },
+    "operator": {
+      "adapter": "python-remote-5679",
+      "breakpoints": {
+        "exception": {
+          "raised": "N",
+          "uncaught": "N",
+          "userUnhandled": "N"
+        }
+      },
+      "remote-request": "attach",
+      "configuration": {
+        "request": "attach",
+        "justMyCode": true,
+        "pathMappings": [
+          {
+            "localRoot": "${workspaceRoot}",
+            "remoteRoot": "/app"
+          }
+        ]
+      }
+    }
+  }
+}

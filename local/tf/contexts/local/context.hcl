@@ -1,0 +1,4 @@
+locals {
+  ctx = "kind-locales"
+}
+

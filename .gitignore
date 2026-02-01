@@ -1,0 +1,14 @@
+**/charts/
+.env
+.venv/
+.env
+.DS_Store
+**/__pycache__/
+.*_cache
+*.log
+generated/
+**/.terraform/
+*.tfstate
+*.tfstate.backup
+.terragrunt-cache
+.terraform.lock.hcl
