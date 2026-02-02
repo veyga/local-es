@@ -1,0 +1,35 @@
+[project]
+name = "local-es"
+version = "0.1.0"
+description = "A client app which interacts with elasticsearch"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "bpython>=0.25",
+    "elasticsearch>=9.2.1",
+    "fastapi>=0.128.0",
+    "httpx>=0.28.1",
+    "pydantic-settings>=2.11.0",
+    "uvicorn>=0.40.0",
+]
+
+[dependency-groups]
+dev = [
+    "debugpy>=1.8.20",
+    "pre-commit>=4.3.0",
+    "pytest>=9.0.2",
+    "pytest-parametrization>=2022.2.1",
+    "ruff>=0.14.1",
+    "watchdog>=6.0.0",
+]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+ignore = [
+    "E731", # allow assignment of lambdas to a symbol
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"

@@ -1,0 +1,6 @@
+*
+!bin
+!src
+!pyproject.toml
+!uv.lock
+!logconfig
